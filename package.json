@@ -1,0 +1,93 @@
+{
+  "name": "flutter-mvvm-architecture-generator",
+  "displayName": "Flutter MVVM Architecture Generator",
+  "description": "VsCode extension to generate boilerplate code when using FilledStack's responsive architecture using Providers",
+  "version": "1.7.0",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "keywords": [
+    "flutter",
+    "filledstacks",
+    "MVVM",
+    "dart"
+  ],
+  "publisher": "madhukesh040011",
+  "icon": "images/flutter.png",
+  "author": {
+    "email": "madhukesh04@gmail.com",
+    "name": "Madhukesh",
+    "url": "https://github.com/madhukesh048"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Ajil Oommen",
+      "email": "ajilo297@gmail.com",
+      "url": "https://github.com/ajilo297"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/madhukesh048/Flutter-MVVM-VS-Code-extension-Pack"
+  },
+  "activationEvents": [
+    "onCommand:extension.createViews",
+    "onCommand:extension.initializeArchitecture",
+    "onCommand:extension.createWidget"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createViews",
+        "title": "Create Views",
+        "category": "Flutter Architecture"
+      },
+      {
+        "command": "extension.initializeArchitecture",
+        "title": "Initialize Architecture",
+        "category": "Flutter Architecture"
+      },
+      {
+        "command": "extension.createWidget",
+        "title": "Create Widgets",
+        "category": "Flutter Architecture"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/lodash": "^4.14.186",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.72.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "mocha": "^10.0.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

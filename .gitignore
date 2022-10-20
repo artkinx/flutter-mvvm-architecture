@@ -1,0 +1,5 @@
+/.eslintrc.json
+/.vscode
+/node_modules
+/tsconfig.json
+/vsc-extension-quickstart.md
